@@ -1,197 +1,720 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malvar's Stylish WebPage</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-   
+    <title>Malvar's Epic Digital Experience</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        a:hover {
-            color: #1a4d80;
-            text-decoration: underline;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .contact-link a {
-            overflow-wrap: anywhere;
-            word-break: break-word;
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            background: #0a0a0a;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Animated Background with Particles */
+        .bg-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        .bg-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 25% 25%, rgba(255,255,255,0.2) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.8);
+            border-radius: 50%;
+            animation: particleFloat 15s linear infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-30px) rotate(120deg); }
+            66% { transform: translateY(-15px) rotate(240deg); }
+        }
+
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Main Container */
+        .container {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 4.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #fff 0%, #f0f9ff 50%, #e0e7ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 50px rgba(255,255,255,0.5);
+            margin-bottom: 2rem;
+            animation: glow 2s ease-in-out infinite alternate, slideInDown 1s ease-out;
+            letter-spacing: 3px;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 30px rgba(255,255,255,0.5)); }
+            to { filter: drop-shadow(0 0 50px rgba(255,255,255,0.8)); }
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Dog Image with Epic Effects */
+        .hero-image {
+            position: relative;
             display: inline-block;
-            max-width: 100%;
+            margin: 2rem 0;
+            animation: slideInUp 1s ease-out 0.3s both;
         }
-        .contact-link {
+
+        .hero-image img {
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 30px;
+            box-shadow: 
+                0 20px 40px rgba(0,0,0,0.3),
+                0 0 100px rgba(255,255,255,0.2);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 3px solid rgba(255,255,255,0.3);
+        }
+
+        .hero-image:hover img {
+            transform: scale(1.1) rotateY(10deg);
+            box-shadow: 
+                0 30px 80px rgba(0,0,0,0.4),
+                0 0 150px rgba(255,255,255,0.4);
+        }
+
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #f9ca24);
+            border-radius: 35px;
+            z-index: -1;
+            animation: rotate 4s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .hero-image:hover::before {
+            opacity: 0.8;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Epic Text Section */
+        .hero-text {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            position: relative;
+            overflow: hidden;
+            animation: slideInLeft 1s ease-out 0.6s both;
+        }
+
+        .hero-text::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-text p {
+            font-size: 1.4rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .hero-text a {
+            color: #4facfe;
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .hero-text a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #4facfe, #00f2fe);
+            transition: width 0.3s ease;
+        }
+
+        .hero-text a:hover::after {
             width: 100%;
         }
-        h1 {
-            color: #2b6cb0;
-            text-align: center;
-            font-family: 'Lobster', cursive;
-            font-size: 60px;
+
+        .hero-text a:hover {
+            color: #00f2fe;
+            text-shadow: 0 0 20px rgba(79, 172, 254, 0.5);
         }
-        h2 {
-            color: #2b6cb0;
-            font-family: 'Lobster', cursive;
-            font-size: 36px;
-        }
-        
-        .profile-section img:hover {
-            transform: scale(1.1);
-            transition: transform 0.3s ease;
-        }
-        .profile-section {
-            display: flex;
-            align-items:center;
-            background-color: rgba(255, 255, 0, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            width: 80%; 
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            
-        }
-        .profile-section img {
-            border-radius: 50%;
-            margin-right: 20px;
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-        }
-        .profile-text {
-            text-align: left;
-        }
-        .section { 
-            background-color: rgba(255, 255, 255, 0.8);
-             padding: 20px;
-             margin: 20px;
-             border-radius: 10px;
-             width: 80%;
-             max-width: 600px;
-             margin-left: auto;
-             margin-right: auto;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: #2b6cb0;
-            color: white;
-            font-size: 30px;
+
+        /* Epic Button */
+        .epic-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border: none;
-            border-radius: 5px;
+            padding: 1rem 3rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            border-radius: 50px;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+            animation: slideInUp 1s ease-out 0.9s both;
+            margin: 2rem 0;
         }
-        button:hover {
-            background-color: #1a4d80;
-            
-            transform: scale(1.05);
-        }
-      body  {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        background-color: #f0f0f0;
-        background-image: url("https://images.pexels.com/photos/158063/bellingrath-gardens-alabama-landscape-scenic-158063.jpeg?_gl=1*qyhzzj*_ga*NjgxMjk4NjE1LjE3NTQxNTc4MzI.*_ga_8JE65Q40S6*czE3NTQxNTc4MzEkbzEkZzEkdDE3NTQxNTg2MjgkajUwJGwwJGgw");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        font-family: 'verdana', sans-serif;
-        text-align: center;
-      }
 
-     
+        .epic-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
 
-         
+        .epic-button:hover::before {
+            left: 100%;
+        }
 
-      p {
-        color: #333;
-        font-size: 40px;
-        background-color: rgba(255, 255, 255, 0.7);
-        padding: 15px;
-        border-radius: 10px;
-        display: inline-block;
-      }
-      footer {
-        margin-top: 40px;
-        padding: 20px;
-        background-color: rgba(43, 108, 176, 0.8);
-        color: white;
-        width: 80%;
-        max-width: 600px;
-        text-align: center;
-        border-top: 3px solid #1a4d80;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 10px;
+        .epic-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 25px 50px rgba(102, 126, 234, 0.5);
         }
-      
-      .section p {
-        font-size:20px;
-        padding: 10px;
-        background-color: rgba(255, 255, 255, 0.7);
-        border-radius: 10px;
-      }
-      @media (max-width: 600px) {
-        p {
-            font-size: 24px;
+
+        .epic-button:active {
+            transform: translateY(-2px) scale(1.02);
         }
-        a {
-            font-size: 18px;
-        }
-      
-      .profile-section {
-            flex-direction: column;
+
+        /* Profile Section */
+        .profile-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            padding: 3rem;
+            margin: 3rem auto;
+            max-width: 900px;
+            display: flex;
             align-items: center;
-             text-align: center;
-         }
-       .profile-section img {
-             margin-right: 0;
-             margin-bottom: 10px;
-         }
-      
+            gap: 3rem;
+            position: relative;
+            overflow: hidden;
+            animation: slideInRight 1s ease-out 1.2s both;
+        }
 
-    }
-       img {max-width: 100%;
-           height:auto;
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .profile-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: profileSpin 10s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes profileSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .profile-image {
+            position: relative;
+        }
+
+        .profile-image img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 
+                0 20px 40px rgba(0,0,0,0.3),
+                0 0 80px rgba(255,255,255,0.2);
+            transition: all 0.5s ease;
+            border: 4px solid rgba(255,255,255,0.3);
+        }
+
+        .profile-image:hover img {
+            transform: scale(1.1);
+            box-shadow: 
+                0 30px 60px rgba(0,0,0,0.4),
+                0 0 120px rgba(255,255,255,0.4);
+        }
+
+        .profile-text h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .profile-text p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.8;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            padding: 3rem;
+            margin: 3rem auto;
+            max-width: 700px;
+            text-align: center;
+            position: relative;
+            animation: slideInUp 1s ease-out 1.5s both;
+        }
+
+        .contact-section h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2rem;
+        }
+
+        .social-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .social-link:hover::before {
+            left: 100%;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(79, 172, 254, 0.5);
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 2rem;
+            margin: 3rem auto;
+            max-width: 800px;
+            text-align: center;
+            animation: slideInUp 1s ease-out 1.8s both;
+        }
+
+        .footer p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+                letter-spacing: 2px;
+            }
+
+            .hero-image img {
+                width: 300px;
+                height: 225px;
+            }
+
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .profile-text h2 {
+                font-size: 2rem;
+            }
+
+            .contact-section h2 {
+                font-size: 2rem;
+            }
+
+            .hero-text,
+            .profile-section,
+            .contact-section,
+            .footer {
+                margin: 2rem 1rem;
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.5rem;
+                letter-spacing: 1px;
+            }
+
+            .hero-image img {
+                width: 250px;
+                height: 190px;
+            }
+
+            .hero-text p {
+                font-size: 1.2rem;
+            }
+
+            .epic-button {
+                padding: 0.8rem 2rem;
+                font-size: 1.1rem;
+            }
         }
     </style>
-    
- 
+</head>
+<body>
+    <div class="bg-container">
+        <div class="particles"></div>
+    </div>
 
-  </head>
-  <body>
-    
-    <h1>Hello! MADLANG PEOPLE!!</h1>
-    <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" alt="A Smiling Dog in a bright green garden during daytime" width="400">
-    <p>
-        It was customized using Google Fonts.
-      Visit
-      <a href="https://www.facebook.com/anna.grg.lcs" target="_blank">facebook.com/anna.grg.lcs</a>
-      for more info!
-  </p>
-    
-    <button onclick="alert('Hello,Malvar! Keep coding')">Greet Me!</button>
-    <div class="section profile-section">
-        <a href="https://facebook.com/anna.grg.lcs" target="_blank">
-            <img src="https://images.pexels.com/photos/10038681/pexels-photo-10038681.jpeg" alt="Professional profile picture of Malvar" width="150">
-        </a>
-        <div class="profile-text">
-            <h2>About Me</h2>
-            <p>Hello! This is Malvar Vezarda Fl. I'm Learning web development. This section is laid out using Flexbox </p>
+    <div class="container">
+        <div class="hero">
+            <h1><i class="fas fa-star"></i> HELLO! MADLANG PEOPLE!! <i class="fas fa-star"></i></h1>
+            
+            <div class="hero-image">
+                <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" alt="A Smiling Dog in a bright green garden during daytime">
+            </div>
+
+            <div class="hero-text">
+                <p>
+                    <i class="fas fa-palette"></i> It was customized using Google Fonts.
+                    Visit <a href="https://www.facebook.com/anna.grg.lcs" target="_blank">
+                        <i class="fab fa-facebook"></i> facebook.com/anna.grg.lcs
+                    </a> for more info! <i class="fas fa-rocket"></i>
+                </p>
+            </div>
+
+            <button class="epic-button" onclick="showEpicAlert()">
+                <i class="fas fa-magic"></i> Greet Me!
+            </button>
+        </div>
+
+        <div class="profile-section">
+            <div class="profile-image">
+                <a href="https://facebook.com/anna.grg.lcs" target="_blank">
+                    <img src="https://images.pexels.com/photos/10038681/pexels-photo-10038681.jpeg" alt="Professional profile picture of Malvar">
+                </a>
+            </div>
+            <div class="profile-text">
+                <h2><i class="fas fa-user-astronaut"></i> About Me</h2>
+                <p>Hello! This is <strong>Malvar Vezarda Fl</strong>. I'm learning web development and creating amazing digital experiences! This section is laid out using Flexbox with world-class design principles. <i class="fas fa-code"></i></p>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2><i class="fas fa-satellite-dish"></i> Connect With Me</h2>
+            <p style="margin-bottom: 2rem; color: rgba(255,255,255,0.9);">Follow me on social media for updates and more amazing content!</p>
+            <a href="https://facebook.com/anna.grg.lcs/followers" target="_blank" class="social-link">
+                <i class="fab fa-facebook-f"></i> Follow Me On Facebook
+            </a>
+        </div>
+
+        <div class="footer">
+            <p><i class="fas fa-copyright"></i> 2025 My Epic Digital Experience | Created by <strong>Malvar</strong> with <i class="fas fa-heart" style="color: #ff6b6b;"></i></p>
         </div>
     </div>
-    <div class="section">
-        <h2>Contact</h2>
 
-    <div class="contact-link">       
-        <p>Follow Me On 
-            <a href="https://facebook.com/anna.grg.lcs/followers" target="_blank">
-                Facebook
-            </a>
-        </p>
-    </div>
-    <footer>
-        <p>&copy; 2025 My Stylish WEBsite | Created by Me</p>
-    </footer>
-  </body>
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.querySelector('.particles');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random size and position
+                const size = Math.random() * 4 + 1;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Epic alert function
+        function showEpicAlert() {
+            // Create custom modal instead of basic alert
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.8);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 10000;
+                backdrop-filter: blur(10px);
+                animation: fadeIn 0.3s ease;
+            `;
+
+            const modalContent = document.createElement('div');
+            modalContent.style.cssText = `
+                background: linear-gradient(135deg, #667eea, #764ba2);
+                padding: 3rem;
+                border-radius: 20px;
+                text-align: center;
+                color: white;
+                box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+                animation: slideInScale 0.5s ease;
+                max-width: 400px;
+                border: 2px solid rgba(255,255,255,0.3);
+            `;
+
+            modalContent.innerHTML = `
+                <h2 style="font-family: 'Orbitron', monospace; margin-bottom: 1rem; font-size: 2rem;">
+                    <i class="fas fa-star"></i> Hello, Malvar! <i class="fas fa-star"></i>
+                </h2>
+                <p style="margin-bottom: 2rem; font-size: 1.2rem;">Keep coding and creating amazing things! 🚀</p>
+                <button onclick="this.parentElement.parentElement.remove()" style="
+                    background: rgba(255,255,255,0.2);
+                    border: 2px solid rgba(255,255,255,0.5);
+                    padding: 10px 30px;
+                    border-radius: 25px;
+                    color: white;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    font-size: 1rem;
+                " onmouseover="this.style.background='rgba(255,255,255,0.3)'; this.style.transform='scale(1.05)'"
+                   onmouseout="this.style.background='rgba(255,255,255,0.2)'; this.style.transform='scale(1)'">
+                    <i class="fas fa-check"></i> Awesome!
+                </button>
+            `;
+
+            modal.appendChild(modalContent);
+            document.body.appendChild(modal);
+
+            // Add CSS animations
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes fadeIn {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+                @keyframes slideInScale {
+                    from {
+                        opacity: 0;
+                        transform: scale(0.5) translateY(50px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: scale(1) translateY(0);
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        // Initialize particles on load
+        window.addEventListener('load', createParticles);
+
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add parallax effect to images
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImage = document.querySelector('.hero-image img');
+            const profileImage = document.querySelector('.profile-image img');
+            
+            if (heroImage) {
+                heroImage.style.transform = `translateY(${scrolled * 0.1}px)`;
+            }
+            if (profileImage) {
+                profileImage.style.transform = `translateY(${scrolled * 0.05}px)`;
+            }
+        });
+    </script>
+</body>
 </html>
