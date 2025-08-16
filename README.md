@@ -3,12 +3,12 @@ Explore the live collection of these projects online:
 
 Live Portfolio / Collection: https://malvars-personal-website.netlify.app/
 
-## 🖼️ Screenshots / Demo
 <!-- Dito natin ilalagay ang lahat ng screenshots -->
+![Products Page](https://github.com/aglucazgeorgeann-ship-it/personal-website/blob/main/mypesonalwebsite3.jpg?raw=true)
+![Product Detail Page](https://github.com/aglucazgeorgeann-ship-it/personal-website/blob/main/mypesonalwebsite2.jpg?raw=true)
+![Admin Panel](https://github.com/aglucazgeorgeann-ship-it/personal-website/blob/main/mypesonalwebsite1.jpg?raw=true)
 
-!(https://github.com/aglucazgeorgeann-ship-it/personal-website/blob/main/mypesonalwebsite3.jpg?raw=true)
-!(https://github.com/aglucazgeorgeann-ship-it/personal-website/blob/main/mypesonalwebsite2.jpg?raw=true)
-!(https://github.com/aglucazgeorgeann-ship-it/personal-website/blob/main/mypesonalwebsite1.jpg?raw=true)
+
 
 ⚙️ How to Run Locally
 To run these projects on your local machine, follow these simple steps:
