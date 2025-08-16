@@ -12,7 +12,7 @@ Converters: Unit conversion tools (e.g., Temperature Converter).
 
 Clocks & Timers: Interactive digital clocks and countdown timers.
 
-Forms & Input Handling: Exercises on managing user input and form validation.
+Forms & Input Handling: Exercises in managing user input and form validation.
 
 Interactive UI Components: Examples like accordion menus, image sliders, and dynamic styling changes.
 
@@ -34,6 +34,8 @@ Live Portfolio / Collection: https://malvars-personal-website.netlify.app/
 
 📸 Screenshots
 Here's a glimpse of the application's appearance:
+
+!(https://raw.githubusercontent.com/aglucazgeorgeann-ship-it/personal-website/refs/heads/main/personal-website.jpg)
 
 ⚙️ How to Run Locally
 To run these projects on your local machine, follow these simple steps:
