@@ -1,46 +1,53 @@
 🌐 My Personal Web - Collection of Web Projects
-A collection of simple web projects and code exercises built using HTML, CSS, and JavaScript. This repository serves as a personal showcase of foundational web development skills, from basic DOM manipulation to simple interactive applications.
+A dynamic collection of simple web projects and code exercises built using HTML, CSS, and JavaScript. This repository serves as a personal showcase of foundational web development skills, demonstrating practical application from basic DOM manipulation to interactive web applications.
 
 ✨ Features & Projects
-This repository contains various small projects covering:
+This repository contains various small projects showcasing a range of functionalities:
 
-Basic Webpages & Layouts: Simple HTML pages and CSS styling exercises.
+Basic Webpages & Layouts: Demonstrations of core HTML structure and CSS styling.
 
-Calculators: Such as a BMI calculator and other basic calculator functions.
+Calculators: Functional tools like a BMI calculator, showcasing input handling and basic arithmetic.
 
-Converters: For example, unit converters (e.g., Temperature Converter).
+Converters: Unit conversion tools (e.g., Temperature Converter).
 
-Clocks & Timers: Basic digital clocks and countdown timers.
+Clocks & Timers: Interactive digital clocks and countdown timers.
 
-Forms & Input Handling: Exercises in managing form input, like character counters.
+Forms & Input Handling: Exercises on managing user input and form validation.
 
-Password Generators: Simple tools for generating passwords.
+Interactive UI Components: Examples like accordion menus, image sliders, and dynamic styling changes.
 
-Interactive UI Components: Such as accordion menus, image sliders, and color-changing features.
-
-JavaScript Fundamentals: Projects demonstrating DOM manipulation, event handling, and basic logic.
+JavaScript Fundamentals: Projects highlighting DOM manipulation, event listeners, and fundamental programming logic.
 
 🛠 Technologies Used
-This project is built using the following core technologies:
+This project is built using the following core web technologies:
 
 Frontend: HTML5, CSS3, JavaScript (Vanilla JS)
 
-Deployment: Netlify (for live demo of the entire collection)
+Deployment: Netlify (for seamless live hosting)
 
 Version Control: Git, GitHub
 
 🚀 Live Demo
-View the entire collection of these projects deployed online:
+Explore the live collection of these projects online:
 
-Live Portfolio / Collection: [Insert Your Netlify Live Link Here]
-
-(Example: https://your-personal-website.netlify.app/)
+Live Portfolio / Collection: https://malvars-personal-website.netlify.app/
 
 📸 Screenshots
-Here are some visual previews of the projects in this collection. If you want to show more, simply add their image links below.
+Here's a glimpse of the application's appearance:
 
-(To add a screenshot, you need to first upload the image to GitHub (e.g., in the root of your repo) or an image hosting site, then place the link here. Replace the placeholder image links below with your actual screenshot links.)
+⚙️ How to Run Locally
+To run these projects on your local machine, follow these simple steps:
 
-Example Screenshot (Project 1):
+Clone the repository:
 
-Example Screenshot (Project 2):
+git clone https://github.com/aglucazgeorgeann-ship-it/personal-website.git
+cd personal-website
+
+Open in your browser:
+
+Navigate to the specific .html file of the project you wish to view (e.g., mybio.html, bmi.html, converter.html).
+
+Simply double-click the .html file in your file explorer, or drag it into your web browser (Chrome, Firefox, Edge, etc.) to open it.
+
+📄 License
+This project is open-source and licensed under the MIT License.
