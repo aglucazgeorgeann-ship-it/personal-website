@@ -1,0 +1,8 @@
+# Ito ay para siguruhin na lahat ng direct links sa .html files ay gumana
+# at kung walang specific file na binuksan, automatic na mapupunta sa index.html
+/index.html /index.html 200
+/bmi.html /bmi.html 200
+/converter.html /converter.html 200
+# ... (Idagdag ang lahat ng ibang .html files mo dito) ...
+# Basic fallback for clean URLs or if index.html is the main entry
+/* /index.html 200
