@@ -6,8 +6,6 @@ Live Portfolio / Collection: https://malvars-personal-website.netlify.app/
 ## 🖼️ Screenshots / Demo
 <!-- Dito natin ilalagay ang lahat ng screenshots -->
 
-Here's a glimpse of the application's appearance:
-
 !(https://github.com/aglucazgeorgeann-ship-it/personal-website/blob/main/mypesonalwebsite3.jpg?raw=true)
 !(https://github.com/aglucazgeorgeann-ship-it/personal-website/blob/main/mypesonalwebsite2.jpg?raw=true)
 !(https://github.com/aglucazgeorgeann-ship-it/personal-website/blob/main/mypesonalwebsite1.jpg?raw=true)
