@@ -3,7 +3,7 @@ Explore the live collection of these projects online:
 
 Live Portfolio / Collection: https://malvars-personal-website.netlify.app/
 
-📸 Screenshots
+## 🖼️ Screenshots / Demo
 <!-- Dito natin ilalagay ang lahat ng screenshots -->
 
 Here's a glimpse of the application's appearance:
