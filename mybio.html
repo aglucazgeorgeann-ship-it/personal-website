@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malvar's Stylish WebPage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+   
+    <style>
+        a:hover {
+            color: #1a4d80;
+            text-decoration: underline;
+        }
+        .contact-link a {
+            overflow-wrap: anywhere;
+            word-break: break-word;
+            display: inline-block;
+            max-width: 100%;
+        }
+        .contact-link {
+            width: 100%;
+        }
+        h1 {
+            color: #2b6cb0;
+            text-align: center;
+            font-family: 'Lobster', cursive;
+            font-size: 60px;
+        }
+        h2 {
+            color: #2b6cb0;
+            font-family: 'Lobster', cursive;
+            font-size: 36px;
+        }
+        
+        .profile-section img:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+        .profile-section {
+            display: flex;
+            align-items:center;
+            background-color: rgba(255, 255, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%; 
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+        .profile-section img {
+            border-radius: 50%;
+            margin-right: 20px;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+        .profile-text {
+            text-align: left;
+        }
+        .section { 
+            background-color: rgba(255, 255, 255, 0.8);
+             padding: 20px;
+             margin: 20px;
+             border-radius: 10px;
+             width: 80%;
+             max-width: 600px;
+             margin-left: auto;
+             margin-right: auto;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #2b6cb0;
+            color: white;
+            font-size: 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #1a4d80;
+            
+            transform: scale(1.05);
+        }
+      body  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #f0f0f0;
+        background-image: url("https://images.pexels.com/photos/158063/bellingrath-gardens-alabama-landscape-scenic-158063.jpeg?_gl=1*qyhzzj*_ga*NjgxMjk4NjE1LjE3NTQxNTc4MzI.*_ga_8JE65Q40S6*czE3NTQxNTc4MzEkbzEkZzEkdDE3NTQxNTg2MjgkajUwJGwwJGgw");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-family: 'verdana', sans-serif;
+        text-align: center;
+      }
+
+     
+
+         
+
+      p {
+        color: #333;
+        font-size: 40px;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 15px;
+        border-radius: 10px;
+        display: inline-block;
+      }
+      footer {
+        margin-top: 40px;
+        padding: 20px;
+        background-color: rgba(43, 108, 176, 0.8);
+        color: white;
+        width: 80%;
+        max-width: 600px;
+        text-align: center;
+        border-top: 3px solid #1a4d80;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+        }
+      
+      .section p {
+        font-size:20px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+      }
+      @media (max-width: 600px) {
+        p {
+            font-size: 24px;
+        }
+        a {
+            font-size: 18px;
+        }
+      
+      .profile-section {
+            flex-direction: column;
+            align-items: center;
+             text-align: center;
+         }
+       .profile-section img {
+             margin-right: 0;
+             margin-bottom: 10px;
+         }
+      
+
+    }
+       img {max-width: 100%;
+           height:auto;
+        }
+    </style>
+    
+ 
+
+  </head>
+  <body>
+    
+    <h1>Hello! MADLANG PEOPLE!!</h1>
+    <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" alt="A Smiling Dog in a bright green garden during daytime" width="400">
+    <p>
+        It was customized using Google Fonts.
+      Visit
+      <a href="https://www.facebook.com/anna.grg.lcs" target="_blank">facebook.com/anna.grg.lcs</a>
+      for more info!
+  </p>
+    
+    <button onclick="alert('Hello,Malvar! Keep coding')">Greet Me!</button>
+    <div class="section profile-section">
+        <a href="https://facebook.com/anna.grg.lcs" target="_blank">
+            <img src="https://images.pexels.com/photos/10038681/pexels-photo-10038681.jpeg" alt="Professional profile picture of Malvar" width="150">
+        </a>
+        <div class="profile-text">
+            <h2>About Me</h2>
+            <p>Hello! This is Malvar Vezarda Fl. I'm Learning web development. This section is laid out using Flexbox </p>
+        </div>
+    </div>
+    <div class="section">
+        <h2>Contact</h2>
+
+    <div class="contact-link">       
+        <p>Follow Me On 
+            <a href="https://facebook.com/anna.grg.lcs/followers" target="_blank">
+                Facebook
+            </a>
+        </p>
+    </div>
+    <footer>
+        <p>&copy; 2025 My Stylish WEBsite | Created by Me</p>
+    </footer>
+  </body>
+</html>
